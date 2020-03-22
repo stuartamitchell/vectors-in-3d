@@ -5,114 +5,180 @@
 \usepackage{tikz}
 \usepackage{tikz-3dplot}
 
-\title{Introduction to vectors in three dimensions}
+\title{01 -- Introduction to vectors in three dimensions}
 
 \begin{document}
 
-\tdplotsetmaincoords{60}{120}
+    \tdplotsetmaincoords{60}{120}
 
-\maketitle
-\tableofcontents
+    \maketitle
+    \tableofcontents
 
-In this lesson we review the concepts of two-dimensional vectors covered in Unit 1 of Specialist Mathematics and extend to three dimensions.
+    In this lesson we review the concepts of two-dimensional vectors covered in Unit 1 of Specialist Mathematics and extend to three dimensions.
 
-\section{Definitions and notation}
+    \section{Definitions and notation}
 
-\subsection{Vectors as directed line segments}
+    \subsection{Vectors as directed line segments}
 
-A \textbf{vector} is a quantity with both magnitude \emph{and} direction. Vectors can be represented in two or three dimensions as arrows oriented in the vector's direction whose length is the magnitude. An example in two and three dimensions is pictured below.
+    A \textbf{vector} is a quantity with both magnitude \emph{and} direction. Vectors can be represented in two or three dimensions as arrows oriented in the vector's direction whose length is the magnitude. An example in two and three dimensions is pictured below.
 
-\[ 
-    \begin{tikzpicture}[axis/.style={->,thick},
-        vector/.style={-stealth,very thick},
-        vector guide/.style={dashed,thick}]]
-    \draw[axis] (0,0) -- (0,3) node[anchor=south] {$y$};
-    \draw[axis] (0,0) node[anchor=north east] {$O$} -- (3,0) node[anchor=west] {$x$};
-    \draw[vector] (0,0) -- (1.5,2) node[anchor=south west] {$A(a_x, a_y)$};
-    \draw[vector guide] (1.5,2) -- (1.5,0) node[anchor=north] {$a_x$};
-    \draw[vector guide] (1.5,2) -- (0,2) node[anchor=east] {$a_y$};
-    \node at (0.4,0.2) {$\theta$};
-    \end{tikzpicture} \qquad
-    \begin{tikzpicture}[tdplot_main_coords,
-        axis/.style={->,thick},
-        vector/.style={-stealth,very thick},
-        vector guide/.style={dashed,thick}]
+    \[ 
+        \begin{tikzpicture}[axis/.style={->,thick},
+            vector/.style={-stealth,very thick},
+            vector guide/.style={dashed,thick}]]
+        \draw[axis] (0,0) -- (0,3) node[anchor=south] {$y$};
+        \draw[axis] (0,0) node[anchor=north east] {$O$} -- (3,0) node[anchor=west] {$x$};
+        \draw[vector] (0,0) -- (1.5,2) node[anchor=south west] {$A(a_x, a_y)$};
+        \draw[vector guide] (1.5,2) -- (1.5,0) node[anchor=north] {$a_x$};
+        \draw[vector guide] (1.5,2) -- (0,2) node[anchor=east] {$a_y$};
+        \node at (0.4,0.2) {$\theta$};
+        \end{tikzpicture} \qquad
+        \begin{tikzpicture}[tdplot_main_coords,
+            axis/.style={->,thick},
+            vector/.style={-stealth,very thick},
+            vector guide/.style={dashed,thick}]
+        
+            \coordinate (O) at (0,0,0);
+            \tdplotsetcoord{P}{3}{55}{60};
+        
+            \draw[axis] (O) -- (3,0,0) node[anchor=north east] {$x$};
+            \draw[axis] (O) -- (0,3,0) node[anchor=north west] {$y$};
+            \draw[axis] (O) -- (0,0,3) node[anchor=south] {$z$};
+            \draw[vector] (O) -- (P) node[anchor=south west] {$A(a_x, a_y, a_z)$};
+            \draw[vector guide] (O) -- (Pxy);
+            \draw[vector guide] (P) -- (Pxy);
+            \draw[vector guide] (Px) node[above left] {$a_x$} -- (Pxy) -- (Py) node[above right] {$a_y$};
+            \draw[vector guide] (P) -- (Pz) node[left] {$a_z$};
+        \end{tikzpicture}
+    \]
+
+    \subsection{Naming vectors}
+
+    A vector whose tail is at the point $A$ and whose head is at the point $B$ is denoted by $\vec{AB}$. Vectors are also often denoted by a single bold lowercase letter. It is also common to use bold text with a lower case letter to denote a vector. For example, we may write $\mathbf{v} = \vec{AB}$. When handwriting, it can be challenging to distinguish bold text from normal, so it is common to write a tilde under the lowercase letter, like $\underset{\sim}{v}$. The images above show the vector $\vec{OA}$ which joins the origin, $O$, to a point $A$. We call such vectors \textbf{position vectors}. For position vectors we will often use the lower case letter corresponding to the head of the vector, like $\mathbf{a} = \vec{OA}$.
+
+    \subsection{Equality of vectors}
+
+    Two vectors are \textbf{equal} if they have the same magnitude \emph{and} direction, regardless of where they sit in space.  For example, in the image below all the vectors have the same magnitude. $\vec{AB}$ and $\vec{CD}$ are equal, but $\vec{EF}$ is different, since it points in a different direction.
+
+    \[
+        \begin{tikzpicture}[axis/.style={<->,thick},
+            vector/.style={-stealth,very thick},
+            vector guide/.style={dashed,thick}]]
+        
+            \draw[axis] (-3,0) -- (3,0) node[anchor=west] {$x$};
+            \draw[axis] (0,-3) -- (0,3) node[anchor=south] {$y$};
+        
+            \coordinate (A) at (-1,-1);
+            \coordinate (B) at (2,1);
+            \coordinate (C) at (-1,1);
+            \coordinate (D) at (2,3);
+            \coordinate (E) at (3,-2);
+            \coordinate (F) at (1,1);
+            \draw[vector] (A) node[anchor=north east] {$A$} -- (B) node[anchor=south west] {$B$};
+            \draw[vector] (C) node[anchor=north east] {$C$} -- (D) node[anchor=south west] {$D$};
+            \draw[vector] (E) node[anchor=north west] {$E$} -- (F) node[anchor=south east] {$F$};
+        \end{tikzpicture}
+    \]
+
+    \subsection{Column vectors}
+
+    We can write the vector $\vec{AB}$ in the diagram as a $2\times1$ matrix, or \textbf{column vector} $\begin{pmatrix} 4 \\ 3 \end{pmatrix}$.
+
+    \[
+        \begin{tikzpicture}[axis/.style={->,thick},
+            vector/.style={-stealth,very thick},
+            vector guide/.style={dashed,thick}]]
+        
+            \draw[axis] (0,0) -- (0,4) node[anchor=south] {$y$};
+            \draw[axis] (0,0) -- (5,0) node[anchor=west] {$x$};
+        
+            \coordinate (A) at (0.5,0.5);
+            \coordinate (B) at (4.5,3.5);
+            \coordinate (C) at (4.5,0.5);
+            \draw[vector] (A) node[anchor=north east] {$A$} -- (B) node[anchor=south west] {$B$};
+            \draw[vector guide] (A) -- (C) node[midway, below] {4 units} -- (B) node[midway, right] {3 units};
+        \end{tikzpicture}
+    \]
+
+    More generally, the column vector $\begin{pmatrix} x \\ y \end{pmatrix}$ represents a directed line segment which goes horizontally by $|x|$ units and vertically by $|y|$ units. The orientation of the vector is given by the sign of the component. Positive relates to right and up, and negative to left and down. In three dimensions we simply add a third component for the $z$ direction: $\begin{pmatrix} x \\ y \\ z \end{pmatrix}$.
+
+    \subsection{Magnitude}
+
+    The \textbf{magnitude}, $\left| \vec{AB} \right|$ of the vector $\vec{AB}$ in the diagram above is represented by the length of the arrow. It can therefore be calculated by Pythagoras' theorem
+
+    \[ \left| \vec{AB} \right| = \sqrt{4^2 + 3^2} = 5. \]
+
+    For two dimensions in general, a vector $\textbf{v} = \begin{pmatrix} x \\ y \end{pmatrix}$ is given by
+
+    \[ \left| \mathbf{v} \right| = \sqrt{x^2 + y^2}. \]
+
+    For three dimensions, it is just the three dimensional analogue of Pythagoras' theorem:
+    \[ \mathbf{v} = \begin{pmatrix} x \\ y \\ z \end{pmatrix} \implies \left| \mathbf{v} \right| = \sqrt{x^2 + y^2 + z^2}. \]
+
+    \subsection{Addition of vectors}
+
+    We can find the sum of two vectors $\mathbf{u}$ and $\mathbf{v}$ in space by placing the tail of one at the head of the other and joining the tail of the first to the head of the second. The diagram below illustrates this, and further shows that it does not matter which vector we put first. In the red, we go along $\mathbf{u}$ first, then $\mathbf{v}$.  In the blue, we go in the opposite order.
+
+    \[
+        \begin{tikzpicture}[vector/.style={-stealth,very thick}]
+            \coordinate (A) at (0,0);
+            \coordinate (B) at (3,1);
+            \coordinate (C) at (2,3);
+            \coordinate (D) at (-1,2);
+            \draw[vector, red] (A) -- (B) node[midway, below] {$\mathbf{u}$}; 
+            \draw[vector, red] (B) -- (C) node[midway, right] {$\mathbf{v}$};
+            \draw[vector] (A) -- (C) node[midway, left] {$\mathbf{u} + \mathbf{v}$};
+            \draw[vector, blue] (A) -- (D) node[midway, left] {$\mathbf{v}$};
+            \draw[vector, blue] (D) -- (C) node[midway, above] {$\mathbf{u}$};
+        \end{tikzpicture}
+    \]
+
+    Let $\mathbf{u} = \begin{pmatrix} u_1 \\ u_2 \\ u_3 \end{pmatrix}$ and let $\mathbf{v} = \begin{pmatrix} v_1 \\ v_2 \\ v_2 \end{pmatrix}$. The sum $\mathbf{u} + \mathbf{v}$ is achieved by component-wise addition:
+    \[ \mathbf{u} + \mathbf{v} = \begin{pmatrix} u_1 + v_1 \\ u_2 + v_2 \\ u_3 + v_3 \end{pmatrix}. \]
+
+    \subsection{Scalar multiplication}
+
+    We can multiply a vector by a real number or \textbf{scalar}. The result is a change in the magnitude and possibly reversal of direction, if the scalar is negative. 
     
-        \coordinate (O) at (0,0,0);
-        \tdplotsetcoord{P}{3}{55}{60};
-    
-        \draw[axis] (O) -- (3,0,0) node[anchor=north east] {$x$};
-        \draw[axis] (O) -- (0,3,0) node[anchor=north west] {$y$};
-        \draw[axis] (O) -- (0,0,3) node[anchor=south] {$z$};
-        \draw[vector] (O) -- (P) node[anchor=south west] {$A(a_x, a_y, a_z)$};
-        \draw[vector guide] (O) -- (Pxy);
-        \draw[vector guide] (P) -- (Pxy);
-        \draw[vector guide] (Px) node[above left] {$a_x$} -- (Pxy) -- (Py) node[above right] {$a_y$};
-        \draw[vector guide] (P) -- (Pz) node[left] {$a_z$};
-    \end{tikzpicture}
-\]
+    For $k \in \mathbb{R}^+$, and any vector $\mathbf{v}$ the vector $k \mathbf{v}$ is $k$ times as long and in the same direction as $\mathbf{v}$. If $k \in \mathbb{R}^-$, then the vector $k \mathbf{v}$ is $k$ times as long in the \emph{opposite} direction to $\mathbf{v}$. This is pictured below for some positive scalar $k$.
 
-\subsection{Naming vectors}
+    \[
+        \begin{tikzpicture}[vector/.style={-stealth,very thick}]
+            \coordinate (A) at (0,0);
+            \coordinate (B) at (1,1);
+            \coordinate (C) at (2,0);
+            \coordinate (D) at (4,2);
+            \coordinate (E) at (4,0);
+            \coordinate (F) at (6,2);
+            \draw[vector] (A) -- (B) node[midway, right] {$\mathbf{v}$};
+            \draw[vector] (C) -- (D) node[midway, right] {$k \mathbf{v}$};
+            \draw[vector] (F) -- (E) node[midway, right] {$-k \mathbf{v}$};
+        \end{tikzpicture}
+    \]
 
-A vector whose tail is at the point $A$ and whose head is at the point $B$ is denoted by $\vec{AB}$. Vectors are also often denoted by a single bold lowercase letter. It is also common to use bold text with a lower case letter to denote a vector. For example, we may write $\mathbf{v} = \vec{AB}$. When handwriting, it can be challenging to distinguish bold text from normal, so it is common to write a tilde under the lowercase letter, like $\underset{\sim}{v}$. The images above show the vector $\vec{OA}$ which joins the origin, $O$, to a point $A$. For vectors whose tail is at the origin, we will often use the lower case letter corresponding to the head of the vector, like $\mathbf{a} = \vec{OA}$.
+    On column vectors it is just component-wise multiplication by the scalar:
 
-\subsection{Equality of vectors}
+    \[ k \begin{pmatrix} v_1 \\ v_2 \\ v_3 \end{pmatrix} = \begin{pmatrix} k v_1 \\ k v_2 \\ k v_3 \end{pmatrix}. \]
 
-Two vectors are \textbf{equal} if they have the same magnitude \emph{and} direction, regardless of where they sit in space.  For example, in the image below all the vectors have the same magnitude. $\vec{AB}$ and $\vec{CD}$ are equal, but $\vec{EF}$ is different, since it points in a different direction.
+    Two vectors $\mathbf{u}$ and $\mathbf{v}$ are \textbf{parallel} if there exists some scalar $k \in \mathbb{R} \backslash \{ 0 \}$ such that $\mathbf{v} = k \mathbf{u}$.
 
-\[
-    \begin{tikzpicture}[axis/.style={<->,thick},
-        vector/.style={-stealth,very thick},
-        vector guide/.style={dashed,thick}]]
-    
-        \draw[axis] (-3,0) -- (3,0) node[anchor=west] {$x$};
-        \draw[axis] (0,-3) -- (0,3) node[anchor=south] {$y$};
-    
-        \coordinate (A) at (-1,-1);
-        \coordinate (B) at (2,1);
-        \coordinate (C) at (-1,1);
-        \coordinate (D) at (2,3);
-        \coordinate (E) at (3,-2);
-        \coordinate (F) at (1,1);
-        \draw[vector] (A) node[anchor=north east] {$A$} -- (B) node[anchor=south west] {$B$};
-        \draw[vector] (C) node[anchor=north east] {$C$} -- (D) node[anchor=south west] {$D$};
-        \draw[vector] (E) node[anchor=north west] {$E$} -- (F) node[anchor=south east] {$F$};
-    \end{tikzpicture}
-\]
+    \subsection{The zero vector}
 
-\subsection{Column vectors}
+    The \textbf{zero vector} is the column vector whose components are all zero:
 
-We can write the vector $\vec{AB}$ in the diagram as a $2\times1$ matrix, or \textbf{column vector} $\begin{pmatrix} 4 \\ 3 \end{pmatrix}$.
+    \[ \mathbf{0} = \begin{pmatrix} 0 \\ 0 \\ 0 \end{pmatrix}. \]
 
-\[
-    \begin{tikzpicture}[axis/.style={->,thick},
-        vector/.style={-stealth,very thick},
-        vector guide/.style={dashed,thick}]]
-    
-        \draw[axis] (0,0) -- (0,4) node[anchor=south] {$y$};
-        \draw[axis] (0,0) -- (5,0) node[anchor=west] {$x$};
-    
-        \coordinate (A) at (0.5,0.5);
-        \coordinate (B) at (4.5,3.5);
-        \coordinate (C) at (4.5,0.5);
-        \draw[vector] (A) node[anchor=north east] {$A$} -- (B) node[anchor=south west] {$B$};
-        \draw[vector guide] (A) -- (C) node[midway, below] {4 units} -- (B) node[midway, right] {3 units};
-    \end{tikzpicture}
-\]
+    It has a magnitude of zero and has \emph{no} direction.
 
-More generally, the column vector $\begin{pmatrix} x \\ y \end{pmatrix}$ represents a directed line segment which goes horizontally by $|x|$ units and vertically by $|y|$ units. The orientation of the vector is given by the sign of the component. Positive relates to right and up, and negative to left and down. In three dimensions we simply add a third component for the $z$ direction: $\begin{pmatrix} x \\ y \\ z \end{pmatrix}$.
+    \subsection{Properties of vector operations}
 
-\subsection{Magnitude}
+    Prove the following for three-dimensional vectors $\mathbf{u}$, $\mathbf{v}$, and $\mathbf{w}$ and scalar $k \in \mathbf{R}$:
 
-The \textbf{magnitude}, $\left| \vec{AB} \right|$ of the vector $\vec{AB}$ in the diagram above is represented by the length of the arrow. It can therefore be calculated by Pythagoras' theorem
-
-\[ \left| \vec{AB} \right| = \sqrt{4^2 + 3^2} = 5. \]
-
-For two dimensions in general, a vector $\textbf{v} = \begin{pmatrix} x \\ y \end{pmatrix}$ is given by
-
-\[ \left| \mathbf{v} \right| = \sqrt{x^2 + y^2}. \]
-
-For three dimensions, it is just the three dimensional analogue of Pythagoras' theorem:
-\[ \mathbf{v} = \begin{pmatrix} x \\ y \\ z \end{pmatrix} \implies \left| \mathbf{v} \right| = \sqrt{x^2 + y^2 + z^2}. \]
-
+    \begin{description}
+        \item[Commutativity of addition] $\mathbf{u} + \mathbf{v} = \mathbf{v} + \mathbf{u}$,
+        \item[Associativity of addition] $(\mathbf{u} + \mathbf{v}) + \mathbf{w} = \mathbf{u} + (\mathbf{v} + \mathbf{w})$,
+        \item[Additive identity] $\mathbf{v} + \mathbf{0} = \mathbf{v}$,
+        \item[Additive inverse] $\mathbf{v} + (-\mathbf{v}) = \mathbf{0}$,
+        \item[Distributive law] $k (\mathbf{u} + \mathbf{v}) = k \mathbf{u} + k \mathbf{v}$.
+    \end{description}
 \end{document}
