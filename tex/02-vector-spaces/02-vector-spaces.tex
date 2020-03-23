@@ -60,4 +60,26 @@
     \[ (a_1, a_2, \ldots, a_n) + (b_1, b_2, \ldots, b_n) = (a_1 + b_1, a_2 + b_2, \ldots, a_n + b_n), \]
     and
     \[ k (a_1, a_2, \ldots a_n ) = (k a_1, k a_2, \ldots, k a_n). \]
+
+    \section{Linear dependence}
+
+    \subsection{Linear combinations}
+
+    A \textbf{linear combination} of vectors $\mathbf{v}_1$, $\mathbf{v}_2$, and  $\mathbf{v}_3$ in a vector space $V$ over a field $F$ is a sum
+    \[ k_1 \mathbf{v}_1 + k_2 \mathbf{v}_2 + k_3 \mathbf{v}_3, \]
+    where $k_1, k_2, k_3 \in F$.
+
+    For example, let $\mathbf{u} = \begin{pmatrix} 2 \\ 4 \end{pmatrix}$, and $\mathbf{v} = \begin{pmatrix} -1 \\ 3 \end{pmatrix}$. The vector $\begin{pmatrix} 1 \\ 17 \end{pmatrix}$ is the linear combination
+    \[ 2 \mathbf{u} + 3 \mathbf{v} = \begin{pmatrix} 4 \\ 8 \end{pmatrix} + \begin{pmatrix} -3 \\ 9 \end{pmatrix}. \]
+    
+    \subsection{Linear dependence}
+    
+    A set of vectors $\mathbf{v}_1, \mathbf{v}_2, \ldots, \mathbf{v}_k$ is \textbf{linearly dependent} if one of the vectors can be written as a linear combination of the others, or equivalently, if there exist scalars $a_1, a_2, \ldots, a_k$, not all zero, such that
+    \[ a_1 \mathbf{v}_1 + a_2 \mathbf{v}_2 + \cdots + a_k \mathbf{v}_k = \mathbf{0}. \]
+
+    If no vector can be written as a linear combination of the others, or all the scalars in the expression above must be zero, then the vectors are said to be \textbf{linear independent}.
+
+    \subsubsection{Exercise} Show the equivalence of the two statements describing linear dependence above.
+
+    %\section{Basis and dimension}
 \end{document}

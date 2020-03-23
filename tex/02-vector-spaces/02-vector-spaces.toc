@@ -1,3 +1,7 @@
 \contentsline {section}{\tocsection {}{1}{Definition and examples}}{1}{section.1}% 
 \contentsline {subsection}{\tocsubsection {}{1.1}{Fields}}{1}{subsection.1.1}% 
 \contentsline {subsection}{\tocsubsection {}{1.2}{Vector spaces}}{1}{subsection.1.2}% 
+\contentsline {section}{\tocsection {}{2}{Linear dependence}}{2}{section.2}% 
+\contentsline {subsection}{\tocsubsection {}{2.1}{Linear combinations}}{2}{subsection.2.1}% 
+\contentsline {subsection}{\tocsubsection {}{2.2}{Linear dependence}}{2}{subsection.2.2}% 
+\contentsline {subsubsection}{\tocsubsubsection {}{2.2.1}{Exercise}}{3}{subsubsection.2.2.1}% 
