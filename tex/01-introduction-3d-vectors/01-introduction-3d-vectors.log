@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.3.22)  23 MAR 2020 12:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.3.22)  24 MAR 2020 07:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -496,22 +496,22 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 186.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 186.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 186.
 Package rerunfilecheck Info: File `01-introduction-3d-vectors.out' has not changed.
-(rerunfilecheck)             Checksum: 70398A5634D0185B4AD7AFD8053679C9;784.
+(rerunfilecheck)             Checksum: C3F949577D1375886EACC3F68B79C01C;698.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 186.
  ) 
 Here is how much of TeX's memory you used:
- 17321 strings out of 492616
- 329551 string characters out of 6129481
- 391461 words of memory out of 5000000
- 20781 multiletter control sequences out of 15000+600000
+ 17325 strings out of 492616
+ 329570 string characters out of 6129481
+ 391460 words of memory out of 5000000
+ 20780 multiletter control sequences out of 15000+600000
  11859 words of font info for 46 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  55i,8n,58p,868b,662s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on /Users/stuartmitchell/Projects/vectors-in-3d/tex/01-introduction-3d-vectors/01-introduction-3d-vectors.pdf (4 pages, 130357 bytes).
+Output written on /Users/stuartmitchell/Projects/vectors-in-3d/tex/01-introduction-3d-vectors/01-introduction-3d-vectors.pdf (4 pages, 130988 bytes).
 PDF statistics:
- 137 PDF objects out of 1000 (max. 8388607)
- 117 compressed objects within 2 object streams
- 17 named destinations out of 1000 (max. 500000)
- 101 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 139 PDF objects out of 1000 (max. 8388607)
+ 119 compressed objects within 2 object streams
+ 22 named destinations out of 1000 (max. 500000)
+ 93 words of extra memory for PDF output out of 10000 (max. 10000000)
 

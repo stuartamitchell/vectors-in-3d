@@ -8,4 +8,4 @@
 \contentsline {subsection}{\tocsubsection {}{2.1}{Addition of vectors}}{3}{subsection.2.1}% 
 \contentsline {subsection}{\tocsubsection {}{2.2}{Scalar multiplication}}{4}{subsection.2.2}% 
 \contentsline {subsection}{\tocsubsection {}{2.3}{The zero vector}}{4}{subsection.2.3}% 
-\contentsline {subsection}{\tocsubsection {}{2.4}{Properties of vector operations}}{4}{subsection.2.4}% 
+\contentsline {subsubsection}{\tocsubsubsection {}{2.3.1}{Exercise}}{4}{subsubsection.2.3.1}% 
