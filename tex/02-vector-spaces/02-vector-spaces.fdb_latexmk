@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1584963591 "/Users/stuartmitchell/Projects/vectors-in-3d/tex/02-vector-spaces/02-vector-spaces.tex" "/Users/stuartmitchell/Projects/vectors-in-3d/tex/02-vector-spaces/02-vector-spaces.pdf" "02-vector-spaces" 1584963594
-  "/Users/stuartmitchell/Projects/vectors-in-3d/tex/02-vector-spaces/02-vector-spaces.aux" 1584963591 2997 f45d67b394393531e1361aeb84e94967 ""
-  "/Users/stuartmitchell/Projects/vectors-in-3d/tex/02-vector-spaces/02-vector-spaces.tex" 1584963592 10336 a49633851244b70bb1d3b0c6d1352fc9 ""
+["pdflatex"] 1585000721 "/Users/stuartmitchell/Projects/vectors-in-3d/tex/02-vector-spaces/02-vector-spaces.tex" "/Users/stuartmitchell/Projects/vectors-in-3d/tex/02-vector-spaces/02-vector-spaces.pdf" "02-vector-spaces" 1585000721
+  "/Users/stuartmitchell/Projects/vectors-in-3d/tex/02-vector-spaces/02-vector-spaces.aux" 1585000721 2997 f45d67b394393531e1361aeb84e94967 ""
+  "/Users/stuartmitchell/Projects/vectors-in-3d/tex/02-vector-spaces/02-vector-spaces.tex" 1585000720 10336 2f2a0ceb4a13c53663de70c3702d7d8b ""
   "/usr/local/texlive/2019/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -146,15 +146,15 @@
   "/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1557342064 3277517 23507ed665b4dd9046f0f2a94bbef2be ""
   "/usr/local/texlive/2019/texmf-var/web2c/pdftex/pdflatex.fmt" 1584831324 4259636 03cef53ba4f1be2d5fe43a5693ef120e ""
   "/usr/local/texlive/2019/texmf.cnf" 1557341546 577 d150fef99ac436ad1156e86b0892f6ef ""
-  "02-vector-spaces.aux" 1584963591 2997 f45d67b394393531e1361aeb84e94967 "pdflatex"
-  "02-vector-spaces.out" 1584963591 712 f1470a1fcc80b10d5b19c42261d01d82 "pdflatex"
-  "02-vector-spaces.tex" 1584963592 10336 a49633851244b70bb1d3b0c6d1352fc9 ""
-  "02-vector-spaces.toc" 1584963591 1509 0e6a3f621a6c359daab7ba9a99a9bf33 "pdflatex"
+  "02-vector-spaces.aux" 1585000721 2997 f45d67b394393531e1361aeb84e94967 "pdflatex"
+  "02-vector-spaces.out" 1585000721 712 f1470a1fcc80b10d5b19c42261d01d82 "pdflatex"
+  "02-vector-spaces.tex" 1585000720 10336 2f2a0ceb4a13c53663de70c3702d7d8b ""
+  "02-vector-spaces.toc" 1585000721 1509 0e6a3f621a6c359daab7ba9a99a9bf33 "pdflatex"
   (generated)
-  "/Users/stuartmitchell/Projects/vectors-in-3d/tex/02-vector-spaces/02-vector-spaces.pdf"
   "/Users/stuartmitchell/Projects/vectors-in-3d/tex/02-vector-spaces/02-vector-spaces.log"
-  "02-vector-spaces.aux"
+  "02-vector-spaces.toc"
   "02-vector-spaces.log"
   "02-vector-spaces.out"
-  "02-vector-spaces.toc"
+  "/Users/stuartmitchell/Projects/vectors-in-3d/tex/02-vector-spaces/02-vector-spaces.pdf"
+  "02-vector-spaces.aux"
   "02-vector-spaces.pdf"
