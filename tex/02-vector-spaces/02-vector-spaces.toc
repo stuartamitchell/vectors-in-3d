@@ -3,5 +3,15 @@
 \contentsline {subsection}{\tocsubsection {}{1.2}{Vector spaces}}{1}{subsection.1.2}% 
 \contentsline {section}{\tocsection {}{2}{Linear dependence}}{2}{section.2}% 
 \contentsline {subsection}{\tocsubsection {}{2.1}{Linear combinations}}{2}{subsection.2.1}% 
-\contentsline {subsection}{\tocsubsection {}{2.2}{Linear dependence}}{2}{subsection.2.2}% 
+\contentsline {subsection}{\tocsubsection {}{2.2}{Linear dependence}}{3}{subsection.2.2}% 
 \contentsline {subsubsection}{\tocsubsubsection {}{2.2.1}{Exercise}}{3}{subsubsection.2.2.1}% 
+\contentsline {subsubsection}{\tocsubsubsection {}{2.2.2}{Exercise}}{3}{subsubsection.2.2.2}% 
+\contentsline {subsubsection}{\tocsubsubsection {}{2.2.3}{Exercise}}{3}{subsubsection.2.2.3}% 
+\contentsline {section}{\tocsection {}{3}{Basis and dimension}}{3}{section.3}% 
+\contentsline {subsection}{\tocsubsection {}{3.1}{Span and subspaces}}{3}{subsection.3.1}% 
+\contentsline {subsubsection}{\tocsubsubsection {}{3.1.1}{Exercise}}{4}{subsubsection.3.1.1}% 
+\contentsline {subsection}{\tocsubsection {}{3.2}{Basis}}{4}{subsection.3.2}% 
+\contentsline {subsubsection}{\tocsubsubsection {}{3.2.1}{exercise}}{4}{subsubsection.3.2.1}% 
+\contentsline {subsection}{\tocsubsection {}{3.3}{Dimension}}{4}{subsection.3.3}% 
+\contentsline {subsection}{\tocsubsection {}{3.4}{The standard basis}}{4}{subsection.3.4}% 
+\contentsline {subsubsection}{\tocsubsubsection {}{3.4.1}{Exercise}}{5}{subsubsection.3.4.1}% 

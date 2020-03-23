@@ -54,12 +54,14 @@
         \item Distributivity of scalar multiplication with respect to field addition: $(a + b) \cdot \mathbf{v} = a \cdot \mathbf{v} + b \cdot \mathbf{v}$.
     \end{enumerate}
 
-    The two and three-dimensional vectors with real components described in Lesson 01 form a vector space. They are examples of \textbf{coordinate spaces}. More generally, given a field $F$, all $n$-tuples
+    The two and three-dimensional vectors with real components described in Lesson 01 each form a vector space. They are examples of \textbf{coordinate spaces}. A coordinate space is a vector space, denoted by $F^n$, over a field $F$, whose elements are $n$-tuples
     \[ (a_1, a_2, \ldots, a_n) \]
-    where $a_1, a_2, \ldots, a_n \in F$ form a vector space over $F$, usually denoted by $F^n$. Addition and scalar multiplication are defined component-wise:
+    where $a_1, a_2, \ldots, a_n \in F$. Addition and scalar multiplication are defined component-wise:
     \[ (a_1, a_2, \ldots, a_n) + (b_1, b_2, \ldots, b_n) = (a_1 + b_1, a_2 + b_2, \ldots, a_n + b_n), \]
     and
     \[ k (a_1, a_2, \ldots a_n ) = (k a_1, k a_2, \ldots, k a_n). \]
+
+    Our two and three-dimensional examples from Lesson 01 are hence denoted by $\mathbb{R}^2$ and $\mathbb{R}^3$, respectively. Although we've just defined coordinate spaces as horizontal $n$-tuples, there is no functional difference between that and the column vectors we've been using so far. We find the column notation more convenient when acting on vectors with matrices, like we did with transformations in the plane in Unit 2, but find writing rows more convenient in text.
 
     \section{Linear dependence}
 
@@ -81,5 +83,56 @@
 
     \subsubsection{Exercise} Show the equivalence of the two statements describing linear dependence above.
 
-    %\section{Basis and dimension}
+    \subsubsection{Exercise} Let $\mathbf{v}_1, \ldots, \mathbf{v}_n$ be a set of vectors in $\mathbf{R}^n$. Let $V$ be the $n \times n$ matrix whose columns are the vectors $\mathbf{v}_1$ through $\mathbf{v}_n$. Explain how the matrix $V$ being invertible is equivalent to the collection of vectors $\mathbf{v}_1, \ldots, \mathbf{v}_n$ being linearly dependent. (Hint: consider a matrix equation of the form $A\mathbf{x} = \mathbf{0}$.)
+
+    \subsubsection{Exercise} How would you use matrices to test for linear dependence if the number of vectors was different to the number of components in the vector? (Hint: consider the following scenarios to inform your approach: three two-dimensional vectors and two three-dimensional vectors.)
+
+    \section{Basis and dimension}
+
+    \subsection{Span and subspaces} Let $S$ be a collection of vectors in a vector space $V$ over the field $F$. The \textbf{span} of $S$ is the set of all finite linear combinations of the elements of $S$:
+    \[ \mathrm{span} (S) := \left\{ \sum_{i=1}^k a_i \mathbf{v}_i \: : \: k \in \mathbb{N}, a_i \in F, \mathbf{v}_i \in S \right \}. \]
+    
+    It is worth noting that not every vector needs to be used. For example, consider the collection 
+    \[ S = \left\{ \begin{pmatrix} 2 \\ 0 \\ 1 \end{pmatrix}, \begin{pmatrix} 1 \\ 3 \\ 0 \end{pmatrix}, \begin{pmatrix} 0 \\ -1 \\ 1 \end{pmatrix} \right\} \] 
+    The vectors span of $S$ contains the vector
+    \begin{align*}
+        \begin{pmatrix} 3 \\ -3 \\ 2 \end{pmatrix} = 2 \begin{pmatrix} 2 \\ 0 \\ 1 \end{pmatrix} - \begin{pmatrix} 1 \\ 3 \\ 0 \end{pmatrix}
+    \end{align*}
+
+    The span of a collection of vectors $S$ forms a vector space of its own (see the exercise below). Every element of $\mathrm{span} (S)$ is an element of $V$. We call $\mathrm{span}(S)$ a \textbf{subspace} of $V$, since it is a subset of $V$ and also satisfies the vector space axioms.
+
+    \subsubsection{Exercise} Show that $\mathrm{span}(S)$ is a vector space, for any collection of vectors $S$.
+
+    \subsection{Basis}
+
+    A \textbf{basis} $B$ of a vector space is collection of vectors $B$ such that
+    \begin{enumerate}
+        \item The vectors in $B$ are linearly independent.
+        \item $\mathrm{span}(B) = V$.
+    \end{enumerate}
+
+    For example, any two non-parallel vectors in $\mathbb{R}^2$ form a basis of $\mathbb{R}^2$. Through an appropriate scaling, reversal of direction and then combination of the two vectors, any point in the plane is reachable by such a pair of vectors.
+
+    \subsubsection{exercise} Draw a diagram which illustrates how two non-parallel vectors in $\mathbb{R}^2$ form a basis.
+
+    \subsection{Dimension} The \textbf{dimension} of a vector space $V$ over field $F$ is the cardinality of a basis $B$. If $B$ is a finite set, the dimension is simply the number of vectors in $B$. It is possible for a basis $B$ and hence the dimension of $V$ over $F$ to be infinite.
+
+    We denote the dimension of $V$ over $F$ by $\dim_F(V)$, $[V : F]$, or simply $\dim(V)$ if the field is obvious from the context. For example $\dim(\mathbb{R}^2) = 2$.
+
+    \subsection{The standard basis}
+
+    The \textbf{standard basis} of a coordinate space $F^n$ is the collection of coordinate vectors 
+    \[ \mathbf{e}_1 = (1, 0, , \ldots, 0), \mathbf{e}_2 = (0, 1, 0, \ldots, 0), \ldots, \mathbf{e}_n = (0, 0, \ldots, 0, 1). \]
+    They clearly form a basis for $F^n$ since any vector $(a_1, a_2, \ldots, a_n)$ can simply be written as the linear combination
+    \[ a_1 \mathbf{e}_1 + a_2 \mathbf{e}_2 + \cdots + a_n \mathbf{e}_n. \]
+    In two dimensions it is common to find the vectors $\mathbf{e}_1$ and $\mathbf{e}_2$ called $\mathbf{i}$ and $\mathbf{j}$, respectively. In three dimensions we add the vector $\mathbf{k} := \mathbf{e}_3$.
+
+    \subsubsection{Exercise} Consider two bases 
+    \[ B = \{ \mathbf{b}_1, \ldots, \mathbf{b}_n \} \] 
+    and 
+    \[ C = \{ \mathbf{c}_1, \ldots, \mathbf{c}_n \} \] 
+    of $\mathbb{R}^n$. Suppose that $(x_1, \ldots, x_n)$ give the coordinates of a vector $\mathbf{v}$ in terms of the basis vectors of $B$, i.e.
+    \[ \mathbf{x} = x_1 \mathbf{b}_1 + \cdots + x_n \mathbf{b}_n, \]
+    and $(y_1, \ldots, y_n)$ are the coordinates of $\mathbf{x}$ in terms of the basis vectors of $C$. Describe a process by which we can convert a vector in terms of the basis $B$ to the basis $C$. (Hint: begin by writing each of the vectors in $B$ as a linear combination of the vectors in $C$, and consider the coordinates of $\mathbf{x}$ in terms of $B$.)
+
 \end{document}
