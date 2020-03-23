@@ -1,0 +1,3 @@
+\contentsline {section}{\tocsection {}{1}{Definition and examples}}{1}{section.1}% 
+\contentsline {subsection}{\tocsubsection {}{1.1}{Fields}}{1}{subsection.1.1}% 
+\contentsline {subsection}{\tocsubsection {}{1.2}{Vector spaces}}{1}{subsection.1.2}% 

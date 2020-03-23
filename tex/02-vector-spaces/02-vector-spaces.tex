@@ -14,4 +14,50 @@
     \maketitle
     \tableofcontents
 
+    \section{Definition and examples}
+
+    \subsection{Fields}
+
+    A \textbf{field} is a set $F$ together with two binary operations: \textbf{addition} $+: F \times F \to F$ and \textbf{multiplication} $\cdot: F \times F \to F$. Addition and multiplication are bound by the axioms listed below, for all $a, b, c \in F$.
+    \begin{enumerate}
+        \item Addition and multiplication are associative: $(a + b) + c = a + (b + c)$, and $(a \cdot b) \cdot c = a \cdot (b \cdot c)$.
+        \item Addition and multiplication are commutative: $a + b = b + a$, and $a \cdot b = b \cdot a$.
+        \item Additive and multiplicative identities: there are two elements $0, 1 \in F$ such that $a + 0 = a$ and $a \cdot 1 = a$.
+        \item Additive inverses: For every $a \in F$ there exists an element $(-a)$ such that $a + (-a) = 0$.
+        \item Multiplicative inverses: For every $a \neq 0 \in F$ there exists an element $a^{-1}$ such that $a \cdot a^{-1} = a^{-1} \cdot a = 1$.
+        \item Distributivity of multiplication over addition: $a \cdot (b + c) = a \cdot b + a \cdot c$.
+    \end{enumerate}
+
+    Hopefully, you have observed that these axioms are satisfied by the usual addition and multiplication on the rationals ($\mathbb{Q}$), the reals ($\mathbb{R}$) and the complex numbers ($\mathbb{C}$).
+
+    \subsection{Vector spaces}
+
+    A \textbf{vector space} over a field $F$ is a set $V$ together with two binary operations: 
+    
+    \begin{description}
+        \item[addition] $+: V \times V \to V$, $(\mathbf{u}, \mathbf{v}) \mapsto \mathbf{u} + \mathbf{v}$, and
+        \item[scalar multiplication] $\cdot: F \times V \to V$, $(a, \mathbf{v}) \mapsto a \cdot \mathbf{v}$.
+    \end{description} 
+
+    The elements of $V$ are called \textbf{vectors}, and the elements of $F$ are called \textbf{scalars}.
+
+    The operations of addition and scalar multiplication satisfy the axioms listed below for all vectors $\mathbf{u}, \mathbf{v}, \mathbf{w} \in V$, and scalars $a, b \in F$.
+
+    \begin{enumerate}
+        \item Associativity of addition: $(\mathbf{u} + \mathbf{v}) + \mathbf{w} = \mathbf{u} + (\mathbf{v} + \mathbf{w})$.
+        \item Commutativity of addition: $\mathbf{u} + \mathbf{v} = \mathbf{v} + \mathbf{u}$.
+        \item Additive identity: There exists an element $\mathbf{0} \in V$ such that $\mathbf{v} + \mathbf{0} = \mathbf{v}$.
+        \item Additive inverses: For every $\mathbf{v}$ there exists an element $(-\mathbf{v}) \in V$ such that $\mathbf{v} + (-\mathbf{v}) = \mathbf{0}$.
+        \item Compatibility of scalar multiplication with field multiplication: $a \cdot (b \cdot \mathbf{v}) = (ab) \cdot \mathbf{v}$.
+        \item Identity element of scalar multiplication: $1 \cdot \mathbf{v} = \mathbf{v}$, where $1 \in F$ is the multiplicative identity of $F$.
+        \item Distributivity of scalar multiplication with respect to vector addition: $a \cdot (\mathbf{u} + \mathbf{v}) = a \cdot \mathbf{u} + a \cdot \mathbf{v}$.
+        \item Distributivity of scalar multiplication with respect to field addition: $(a + b) \cdot \mathbf{v} = a \cdot \mathbf{v} + b \cdot \mathbf{v}$.
+    \end{enumerate}
+
+    The two and three-dimensional vectors with real components described in Lesson 01 form a vector space. They are examples of \textbf{coordinate spaces}. More generally, given a field $F$, all $n$-tuples
+    \[ (a_1, a_2, \ldots, a_n) \]
+    where $a_1, a_2, \ldots, a_n \in F$ form a vector space over $F$, usually denoted by $F^n$. Addition and scalar multiplication are defined component-wise:
+    \[ (a_1, a_2, \ldots, a_n) + (b_1, b_2, \ldots, b_n) = (a_1 + b_1, a_2 + b_2, \ldots, a_n + b_n), \]
+    and
+    \[ k (a_1, a_2, \ldots a_n ) = (k a_1, k a_2, \ldots, k a_n). \]
 \end{document}
