@@ -1,0 +1,11 @@
+\contentsline {section}{\tocsection {}{1}{Definition}}{1}{section.1}% 
+\contentsline {subsection}{\tocsubsection {}{1.1}{Scalar (dot) product}}{1}{subsection.1.1}% 
+\contentsline {subsection}{\tocsubsection {}{1.2}{Examples}}{1}{subsection.1.2}% 
+\contentsline {subsubsection}{\tocsubsubsection {}{1.2.1}{Exercise}}{1}{subsubsection.1.2.1}% 
+\contentsline {subsection}{\tocsubsection {}{1.3}{Properties}}{1}{subsection.1.3}% 
+\contentsline {subsubsection}{\tocsubsubsection {}{1.3.1}{Exercise}}{2}{subsubsection.1.3.1}% 
+\contentsline {section}{\tocsection {}{2}{Geometric interpretation}}{2}{section.2}% 
+\contentsline {subsection}{\tocsubsection {}{2.1}{Angle between vectors}}{2}{subsection.2.1}% 
+\contentsline {subsubsection}{\tocsubsubsection {}{2.1.1}{Exercise}}{2}{subsubsection.2.1.1}% 
+\contentsline {subsection}{\tocsubsection {}{2.2}{Finding the angle between two vectors}}{2}{subsection.2.2}% 
+\contentsline {subsubsection}{\tocsubsubsection {}{2.2.1}{Exercise}}{2}{subsubsection.2.2.1}% 
